@@ -23,3 +23,24 @@ Connected devices:
     -Server1: 210.3.14.2
     -Server2: 210.3.14.3
     -PC4: 210.3.14.2(DHCP assigned)
+
+-------------------------------------------------------------------------
+DHCP configuration steps:
+Firstly, we click on router and open up Command Line Interface (CLI) where we press enter and we write this:
+
+Router> enable
+Router# configure terminal
+Router(config)# ip dhcp pool FIRST_SWITCH
+Router(dhcp-config)# network 168.90.0.0 255.255.0.0
+Router(dhcp-config)# default-router 168.90.0.1
+Router(dhcp-config)#exit
+
+Router(config)# ip dhcp pool SECOND_SWITCH
+Router(dhcp-config)# network 210.3.14.0 255.255.255.0
+Router(dhcp-config)# default-router 210.3.14.1
+Router(dhcp-config)# exit
+Router(config)# exit
+Router# exit
+Router> enable
+Router# show ip dhcp binding
+Router# show ip interface brief

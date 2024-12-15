@@ -14,6 +14,7 @@ Connected devices:
     -PC0: 168.90.0.3
     -PC1: 168.90.0.5
     -Server0: 168.90.0.4
+    -PC3: 168.90.0.2(DHCP assigned)
 
 2. Switch 3
 Model: Cisco 2960
@@ -21,3 +22,4 @@ Connected devices:
     -PC2: 210.3.14.4
     -Server1: 210.3.14.2
     -Server2: 210.3.14.3
+    -PC4: 210.3.14.2(DHCP assigned)
